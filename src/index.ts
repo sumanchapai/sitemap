@@ -7,7 +7,7 @@ interface SitemapConfig {
   pages: Array<SchemaTypeDefinition>
 }
 
-export const myPlugin = definePlugin<SitemapConfig | void>((config) => {
+export const sitemap = definePlugin<SitemapConfig>((config) => {
   if (!config?.pages || config.pages.length === 0) {
     throw new Error(`
     You haven't defined the pages to for the RouterSMConfig
